@@ -14,9 +14,15 @@
     <div class="title">
       <h1>Picture This!</h1>
       <h4>My Really Cool Blog Post</h4>
-    </div>
-    <img src="images/museum.jpg" alt="placeholder">
+    </div class="container">
+    <picture> 
+      <!-- art drection and same size different resolution -->
+      <source srcset="images/museum-960_x_960.jpg, images/museum-1920_x_1920.jpg 2x" media="(min-width: 960px)">
+      <source srcset="images/museum-320_x_180.jpg, images/museum-640_x_360.jpg 2x, images/museum-960_x_540.jpg 3x" media="(max-width: 959px)">
+      <!-- source image for if none of the queries are met -->
+      <img src="images/museum-960_x_540.jpg" alt="museum">
 
+    </picture>
   </header>
 </body>
 
